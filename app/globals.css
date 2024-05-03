@@ -1,33 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+    font-family: 'Montserrat', sans-serif; /* Montserrat as primary font */
   }
+
+.imageholder {
+    /* background-image: url("/spacebg.jpg"); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/spacebg.jpg");
+    /* background-image: linear-gradient(105deg,rgba(white,.2)0%,rgba(white,.2)50%,transparent 50%),url("/spacebg.jpg"); */
+    width: 100%; /* Adjust as needed */
+    height: 100vh; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px; /* Assuming you want rounded corners */
+    
+  }
+.voyager-message{
+    width : 30%;
+    @media (max-width:425px) {
+        width: 10%;
+    }
 }
+.button-next{
+    background-color: rgb(218, 218, 4);
+    font-size: 20px;
+    font-weight:800;
+    color : white;
+    padding : 10px;
+    border-radius: 8px;
+    @media (max-width:625px) {
+        background-color: rgb(218, 218, 4);
+        font-size: 12px;
+        font-weight:900;
+        color : rgb(255, 255, 255);
+        padding : 14px;
+        border-radius: 8px;
+    }
+}
+.width-intro-voyager{
+    width: 26em;
+}
+.voyager-bg{
+    background-image: url("/spacebg.jpg");
+    width: 100%; /* Adjust as needed */
+    height: 100vh; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px; /* Assuming you want rounded corners */
+}
+.spaceships{
+    
+    width: 50%; /* Adjust as needed */
+    height: 35vh; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px; /* Assuming you want rounded corners */
+    padding: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+.text-color-violet{
+    color: rgb(18, 159, 169);
+}
+@keyframes warp {
+    0% { transform: translateX(100%); } /* Start position */
+    100% { transform: translateX(-100%); } /* End position */
+  }
+
+  /* Style for the container */
+  .warp-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+  }
+
+  /* Style for the spaceship */
+  .spaceship {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure spaceship appears above lines */
+  }
+
+  /* Style for the warp lines */
+  /* .warp-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; */
+    /* height: 100%; */
+    /* background-image: linear-gradient(to left, transparent, white, transparent); White lines gradient */
+    /* animation: warp 2s linear infinite; Apply animation to warp lines */
+    /* z-index: 0; Ensure lines appear below spaceship */
+  /* } */
+
+  
